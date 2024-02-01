@@ -1,0 +1,31 @@
+.mat-toolbar {
+  justify-content: space-between;
+  padding: 0rem 2rem;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.elements {
+  margin-left: 3rem;
+
+}
+
+.elements a {
+  font-size: 1.1rem;
+}
+
+.mat-icon {
+  padding: 0;
+  margin: 0.5rem;
+  font-size: 1.7rem;
+  width: 30px;
+}

@@ -1,0 +1,25 @@
+.not-found-container {
+  text-align: center;
+  padding: 20px;
+}
+
+mat-icon {
+  font-size: 96px;
+  height: 96px;
+  width: 96px;
+}
+
+h1 {
+  font-size: 72px;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 30px;
+}

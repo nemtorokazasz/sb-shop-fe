@@ -1,0 +1,37 @@
+
+<mat-card>
+  <mat-card-header>
+    <mat-icon mat-card-avatar>person_add</mat-icon>
+    <mat-card-title>Bejelentkezés</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form #loginForm="ngForm" (ngSubmit)="login()" class="registration-form">
+
+      <!-- Felhasználónév mező -->
+      <mat-form-field appearance="fill">
+        <mat-label>Felhasználónév</mat-label>
+        <input matInput [(ngModel)]="user.username" name="username" #username="ngModel" required>
+        <mat-error *ngIf="username.invalid && (username.dirty || username.touched)">
+          <span *ngIf="username.invalid">A felhasználónév kötelező.</span>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Jelszó mező -->
+      <mat-form-field appearance="fill">
+        <mat-label>Jelszó</mat-label>
+        <input matInput [(ngModel)]="user.password" name="password" #password="ngModel" required type="password">
+        <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
+          <span>A jelszó kötelező.</span>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Regisztráció gomb -->
+      <div class="actions">
+        <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.form.valid">Belépés</button>
+        <p class="already-have-account">
+          Még nincs fiókom, <a routerLink="/register">regisztrálok</a>
+        </p>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
